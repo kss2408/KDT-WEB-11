@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko"> <!--한국어 ko-->
+<head>
+    <meta charset="UTF-8"> <!-- 국제표준 UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDT 11기</title>
+</head>
+<body>
+    <!--div태그: block태그로써 한줄의 영역을 차지 -->
+    <div>Hello world!</div>
+    <div>안녕하세요</div>
+    <!--h1~6까지 제목태그-->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <!--p태그: 문장을 쓰는 곳-->
+    <p>뭐하냐 성수야 <br> 집중하자</p>
+    <!--br태그: 줄 바꿈 태그-->
+    <!--hr태그: 한줄 그어줌-->
+    <hr>
+    <!--ul태그: 순서 없는 목록
+    ul태그 속성: disc, circle, square, none-->
+    <!--li(리스트)태그: ul이나 ol태그 안에 list를 작성-->
+    <ul type="square">
+        <li>사과</li>
+        <li>바나나</li>
+        <li>파인애플</li>
+    </ul>
+    <!--ol태그: 순서있는 목록
+    ol태그 속성: 1, A, a I(로마자), i 
+    start 속성: 시작번호 지정
+    reversed: 역순으로 -->
+    <ol type="I" start="10">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+    <ol type="I" start="10" reversed>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+    <!-- 중첩으로 되는것 그리고 꾸미기 태그 비교, 공부-->
+    <ul type="circle">
+        <li>
+            <ol>
+                <li><b>일</b>일</li>
+                <li><strong>이</strong>이</li>
+                <li><i>삼</i>삼</li>
+            </ol>
+        </li>
+     <li>
+        <ol>
+            <li><em>일</em>일</li>
+            <li><del>이</del>이</li>
+            <li><u>삼</u>삼</li>
+        </ol>
+     </li>
+    </ul>
+    <!-- img태그 : 이미지 등록-->
+    <img src="https://s.pstatic.net/shopping.phinf/20231113_25/5c71c0db-aa3e-47ca-8871-c7fe5ba01182.jpg?type=f294_378" alt="광고이미지" />
+
+    <!-- a태그 : 페이지를 이동 '이동'등 무언가 꼭 써주기
+    +a) /day1/cafe.html 로 해보기. 자신pc도 이용가능
+    target: 어떤창에서 이동할건가 새로운창 or 현재창
+    a태그는 inline태그이다 : block태그와 반대로 영역이 없다.-->
+    <div>
+        <a href="https://www.naver.com/" targer="_blank">이동</a>
+        <a href="https://www.naver.com/" targer="_blank">이동</a>
+    </div>
+    <!-- inline은 언제쓰는가? 특정 부분을 바꾸고 싶을때.-->
+    <div>
+        <span style="color: red;">반갑습니다. </span>처음뵙겠습니다.
+    </div>
+    <!-- form태그: input태그를 담는역할, 서버로 input 데이터(value)를 전송시키는 역할
+    placeholder속성 : 사용자에게 안내해주는 역할-->
+    <form>
+        <input type="button" value="전송"/>
+        <button>버튼</button><br />
+        <!-- readonly 추가해보기-->
+        <input type="text" placeholder="이름" value="hi" readonly/><br />
+        <input type="password" placeholder="비밀번호" /><br />
+        <input type="checkbox" name="food" value="pizza" />피자<br />
+        <!-- checked는 항상 체크되어있다.-->
+        <input type="checkbox" name="food" value="chicken" checked/>치킨<br />
+        <input type="radio" name="hobby" value="camping" />캠핑<br />
+        <input type="radio" name="hobby" value="hiking" />등산<br />
+        <input type="radio" name="hobby1" value="swimming" />수영<br />
+        <!-- 체크박스는 온 오프가 되지만 라디오는 무조건 하나 선택해야함
+        라디오는 name값을 무조건 맞춰줘야한다!-->
+        <input type="date" />
+        <input type="time" />
+        <input type="datetime-local" /><br />
+        <!--그룹 묶어줄수도 있다. / 
+        disabled 옵션은 선택도 입력도 못하게 된다. 서버전송도 안된다.
+        readonly의 경우 선택이나 수정은 안되지만 value값은 서버전송이 된다.-->
+        <select>
+            <optgroup label="ASIA">
+                <option>대한민국</option>
+                <option>일본</option>
+                <option disabled>중국</option>
+            </optgroup>
+           <optgroup label="EUROP">
+             <option>이탈리아</option>
+             <option>독일</option>
+             <option>스페인</option>
+           </optgroup>
+            <option>미국</option>
+        </select>
+        </form>
+</body>
+</html>
