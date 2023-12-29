@@ -1,0 +1,19 @@
+.fruits span:first-child {
+    color: red;
+}
+/* span 대신 div를 쓴다고해서 div를 불러오는게 아니다
+ 이미 선택(?)을 첫자식으로 했기때문에 */
+
+ .fruits h3:last-child {
+    color: orange;
+ }
+
+ .fruits *:nth-child(2n+1){
+    color: aqua;
+  }
+
+  /* nth가 가장 약하게 적용된다. */
+
+  .fruits *:not(span) {
+    color: blue;
+  }

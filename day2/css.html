@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--링크방식.-->
+    <link rel="stylesheet" href="index.css" />
+    <!--내장방식 중괄호 활용 and 인라인방식으로는 아래 ul태그에 스타일 컬러 추가하면 li태그 색상 전부 변경됨.-->
+    <style> 
+        li{
+            color:red;
+            width: 100px;
+            background-color: azure;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- color: 폰트의 색상 변경, 새미클론: -->
+        <!-- background-color  -> 배경색상 변경-->
+        <h1 style="color:rgb(39, 150, 44);">css 사용법 익히기</h1>
+        <ul style="background-color:aqua;"> <!--링크방식으로 칠해진 색이 있지만 ul 스타일 인라인이 후에 적용되서 나타난다.-->
+            <li>원</li>
+            <li>투</li>
+            <li>쓰리</li>
+            <!--배경색상 입혀진 순서보자. 링크방식-> ul인라인 -> 내장방식style의 li태그적용 -->
+        </ul>
+    </div>
+</body>
+</html>

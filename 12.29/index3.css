@@ -1,0 +1,13 @@
+a:hover {
+    color:red;
+}
+
+a:active {
+    color:yellow;
+}
+
+input:focus {
+    background-color: orange;
+}
+
+/* 호버와 포커스는 많이 쓰인다. */

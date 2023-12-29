@@ -1,0 +1,14 @@
+h1:hover {
+    color: red;
+    /* cursor: 마우스 모양 바꿀때 사용 
+    여러가지 있으니 찾아보기 grab crosshair 등*/
+    cursor: pointer;
+}
+
+a:active {
+    background-color:blue;
+}
+
+input:focus {
+    background-color: orange;
+}

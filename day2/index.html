@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>가격표</h1>
+    <!-- 셀스페이싱은 셀간의 간격, 셀패딩은 글자와 셀간격-->
+    <table border="1" cellspacing="0" cellpadding="5">
+        <!--헤드 바디 없어도 크게 문제될건 없으나 공부할땐 꼼꼼하게-->
+        <thead>
+            <tr>
+                <th>메뉴</th>
+                <th>가격</th>
+                <th>비고</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>짜장면</td>
+                <td>6000원</td>
+                <td>곱배기 추가 1000원</td>
+            </tr>
+            <tr>
+                <td>짬뽕</td>
+                <td>7000원</td>
+                <td>곱배기 추가 1000원</td>
+            </tr>
+            <tr>
+                <td>탕수육(소)</td>
+                <td>10000원</td>
+                <td>중 +3000원 대 +5000원</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>New 가격표</h2>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <thead>
+            <tr>
+                <!-- TIP!!! th*3 을 하면 같은 th칸이 3개 만들어진다.-->
+                <!-- Tip!!!!  Tab을 누르면 자동적으로 써야하는 칸으로 이동해준다-->
+                <th>메뉴</th>
+                <th>가격</th>
+                <th>비고</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>짜장면</td>
+                <td>6500원</td>
+                <td>곱배기 추가 1000원</td>
+            </tr>
+            <tr>
+                <td>쟁반짜장</td>
+                <td rowspan="2">10000원</td> <!--rowspan:해당 칸을 점유하는 행의 수 지정-->
+                <td></td> <!--빈값이라도 넣어줘야 표가 정상적으로 보인다. 없애보기-->
+            </tr>
+            <tr>
+                <td>삼선짬뽕</td>
+                <!--<td>10000원</td> 삭제처리. -->
+                <td></td>
+                <tr>
+                    <!--colspn: 해당 칸을 점유하는 열의 수 지정-->
+                    <td colspan="3">만두 (재고없음)</td>
+                </tr>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

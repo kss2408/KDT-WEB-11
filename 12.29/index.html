@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        주석은 /* * / 안에 작성하면 된다. 단축기는 컨트롤+/
+        */
+      
+        *{
+            color: red;
+        }
+        
+        /* 우선순위가 있다. 전체 < 태그 < 클래스 <아이디 */
+        span{
+            color: blue;
+        }
+        /* font-size: 글씨 크기 변경 */
+        #orange{
+            color: aqua;
+            font-size: 40px;
+        }
+        /* 내장방식일땐 클래스가 2개일땐 뒤에있는게(bg) 적용 */
+        .orange{
+            color: green;
+        }
+        .bgColor{
+            color: white;
+            background-color: black;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>사과</li>
+            <li>딸기</li>
+            <li id="orange" class="orange">오렌지</li>
+        </ul>
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="bgColor orange">오렌지</span>
+        <!-- class 여러개 넣어서 적용시킬수 있다.-->
+        <!-- 링크방식일땐 나중에오는 orange에 해당되는 방식으로 적용-->
+    </div>
+</body>
+</html>
