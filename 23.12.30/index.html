@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*content 앞에 쓸때 before 뒤에 쓸때 after */
+        .box::before {
+            content: "앞에!";
+            /* 주로 쓰이는곳은 애니매이션 슬라이드 만들때 사용한다. 앞 뒤 화살표 만드는것. */
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            display: inline-block;
+        }
+        .box::after {
+            content: "뒤에~";
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        안녕하세요
+    </div>
+</body>
+</html>

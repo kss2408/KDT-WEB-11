@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* [] 대괄호. {} 중괄호 -> 코드 쓰는 블록 */
+        [disabled] {
+            background-color:red;
+        }
+        [placeholder="이름"] {
+            background-color: orange;
+        }
+        /* not 쓰는거 자주안나오지만 까먹지 않기. 
+            input:not() 을 써도 된다.*/
+        [type]:not([placeholder]){
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="이름" />
+    <input type="password" value="pw" />
+    <input type="text" value="000-0000-0000" />
+    <input type="text" placeholder="핸드폰" />
+    <input type="text" placeholder="주민번호" disabled />
+</body>
+</html>

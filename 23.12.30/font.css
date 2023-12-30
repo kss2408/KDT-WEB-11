@@ -1,0 +1,31 @@
+/* 폰트사이트 눈누! 
+구글과 다르게 폰트링크가아닌 웹폰트형식으로 가져온다.*/
+
+@font-face {
+    font-family: 'ChungjuKimSaengTTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/ChungjuKimSaengTTF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.content1 {
+    color:red;
+    font-size: 20px;
+    font-weight: 700;
+    /* 폰트사이즈 em단위는 배수, rem단위의 r은 루트 
+    그래서 1.1~1.9 이러한 배수식으로 쓴다*/
+    line-height: 40px;
+    /* 보통 폰트사이즈의 2배가 가장 깔끔하다. */
+}
+
+/* 구글에서 폰트 css정보 가져오기. */
+/* 폰트 패밀리에서 폰트변경을 해줘야 적용이 된다. */
+
+* {
+    font-family: 'ChungjuKimSaengTTF', sans-serif;
+}
+
+/* 'ChungjuKimSaengTTF'
+'Noto Sans KR' */
+
+/*로렘 입숨(?) 파악해보자 */

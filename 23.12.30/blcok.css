@@ -1,0 +1,26 @@
+.main > div {
+    /*display 레이아웃을 꾸밀때 사용. 화면에 어떻게 요소들을
+              보여줄지 나타내는것 */
+    display: inline-block; 
+    width: 100px;
+    height: 100px;
+}
+.main {
+    /* margin: 요소의 외부 여백을 지정 */
+    /* margin: 50px; */
+    /* margin: 20px 40px; */
+    /* margin: 20px 40px 60px; */
+    /* margin: 10px 30px 50px 70px; */
+    margin-top: 100px;
+    /* border: 테두리 선을 그리는 속성 */
+    border: solid 2px red;
+    /* padding: 요소의 내부 여백을 지정 */
+    /* 마진과 마찬가지로 위 오 아 왼 사이즈 지정가능. */
+    padding: 50px;
+}
+/* inline, block, linline-block 으로 요소성격을 바꿀수있다.
+inline 설정시 width와 height가 안먹히는걸 볼수있다. */
+
+/* span {
+    display: block;
+} */

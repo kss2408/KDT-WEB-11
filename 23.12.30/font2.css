@@ -1,0 +1,8 @@
+.text {
+    width: 300px;
+    /* text-align => 문자 정렬 */
+    text-align: center;
+    /* text-decoration =>텍스트 문자 선 */
+    text-decoration: underline;
+}
+/* ppt보면서 더많은 종류 공부 */

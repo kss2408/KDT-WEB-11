@@ -1,0 +1,42 @@
+.main {
+    background-color: orange;
+    width: auto;
+    height: 200px;
+}
+.main > div {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+}
+.html {
+    background-color: aqua;
+}
+.css {
+    margin: 0px 30px;
+    background-color: green;
+}
+.java {
+    background-color: red;
+} 
+/*
+.child {
+    background-color: orange;
+    width: auto;
+    height: 200px;
+}
+.child > div {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+}
+.child *:nth-child(1) {
+    background-color: aqua;
+}
+.child *:nth-child(2) {
+    background-color: green;
+    margin: 0px 30px;
+}
+.child *:nth-child(3) {
+    background-color: red;
+} 
+*/
