@@ -1,0 +1,7 @@
+div {
+    border-color: aqua red blue black;
+    border-style: solid dotted ridge dashed;
+    border-width: 5px 10px 15px 20px;
+    width: 300px;
+    height: 300px;
+}

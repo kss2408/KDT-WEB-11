@@ -1,0 +1,19 @@
+body {
+    margin: 0px;
+    background-color: antiquewhite;
+    height: 100vh;
+}
+
+.bs {
+    width: calc(100vw /10); 
+    /* 100%에서 10 나눈값 */
+    height: calc(100vw /10);
+    text-align: center;
+    margin: auto;
+    margin-top: calc(50vh - (100vw /20));
+    /* ()-> 기존5%정도의 마진값 계산을 위해서 넣어준것.
+    굳이 안넣어도 된다 */
+    line-height: calc(100vw /10);
+    /* height과 line-height 값이 동일하면 글씨가 중앙에오게 된다. */
+    background-color: blue; color: white;
+}

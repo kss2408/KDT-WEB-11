@@ -1,0 +1,19 @@
+div {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    border: 15px solid red;
+    background-color: orange;
+}
+/* 컨텐츠 크기는 100x100이고 패딩이랑 보더만큼 늘어나있다. */
+.contentbox {
+    box-sizing: content-box;
+}
+
+/* 컨텐츠,패딩,보더 모두합이 100x100이 된다. */
+.borderbox {
+    box-sizing: border-box;
+}
+
+/* 즉, 어떤걸 기준으로 할지에 따라 크기를 결정해야한다.
+컨텐츠는 빠르게 작업할때, 보더는 정해진 규격으로 제작할때 많이쓰인다. */
