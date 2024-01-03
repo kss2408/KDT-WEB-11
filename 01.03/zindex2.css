@@ -1,0 +1,56 @@
+.main {
+    position: relative;
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+}
+.circle1 {
+    background-color: aqua;
+}
+.circle2 {
+    background-color: blue;
+    top: 50px;
+    left: 70px;
+}
+.circle3 {
+    background-color: blueviolet;
+    top: 100px;
+    left: 120px;
+}
+.circle4 {
+    background-color: indigo;
+    top: 100px;
+    left: 170px;
+}
+.circle5 {
+    background-color: black;
+    top: 100px;
+    left: 220px;
+    z-index: 10;
+}
+.eyeback {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    left: 14px;
+    top: 15px
+}
+.eye {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+    top: 12px;
+}
+
+img {
+    position: relative;
+    z-index: 5;
+    top: 120px;
+}

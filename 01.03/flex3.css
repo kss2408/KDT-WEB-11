@@ -1,0 +1,42 @@
+.main {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    /* display flex -> 부모에 디 플렉스를 줘야 자식들이 수평정렬한다. */
+    background-color: red;
+    flex-direction: row;
+    /* flex-direction: column-reverse; */
+    flex-wrap: wrap;
+    /* wrap - 줄바꿈. */
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: x축과 y축의 시작축을 지정
+    *flex-wrap: 줄바꿈을 설정
+    *justify-content: 축의 정렬을 설정(flex-direction과 헷갈리짐 말것!)
+    *align-items: 위아래축의 정령를 설정(단, 한줄일때)
+    *align-content: 위아래 축의 정렬을 설정(단,여러줄일때)
+     */
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+}
+.item1 {
+    background-color: blue;
+}
+.item2 {
+    background-color: green;
+}
+.item3 {
+    background-color: yellow;
+}
+.item4 {
+    background-color: aquamarine;
+}
+.item5 {
+    background-color: brown;
+}
+.item6 {
+    background-color: orange;
+}

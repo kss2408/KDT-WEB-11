@@ -1,0 +1,8 @@
+.main{
+    background-color: blue;
+    width: 1000%;
+    height: 300px;
+    display: flex;
+    text-decoration: column-reverse;
+}
+

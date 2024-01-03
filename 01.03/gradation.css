@@ -1,0 +1,21 @@
+.grad {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 30px;
+}
+.grad-1 {
+    background: linear-gradient(gray,tomato)
+}
+.grad-2 {
+    background: linear-gradient(90deg,gray,tomato)
+}
+.grad-3 {
+    background: linear-gradient(90deg, gray,75%,tomato)
+}
+.grad-4 {
+    background: linear-gradient(gray,gold,tomato)
+}
+
+
+
+
