@@ -1,0 +1,29 @@
+.main{
+    display: flex;
+    width: 500px;
+    height: 300px;
+} 
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+.img1{
+    top: 180px;
+    transform: skew(20deg);
+    z-index: 3;
+}
+
+.img2{
+    top: 150px;
+    transform: translateX(-40px) skew(20deg);
+    z-index: 2;
+}
+
+.img3{
+    top: 100px;
+    transform: translateX(-10px) skew(20deg);
+    z-index: 1;
+}
+/* position 공부 */

@@ -1,0 +1,17 @@
+.main1 {
+    display: flex;
+    justify-content: space-between;
+    background-color: rebeccapurple;
+    height: 50px;
+    align-items: center;
+    padding: 0px 10px;
+    font-weight: bold;
+}
+
+.menu1 {
+    display: flex;
+}
+
+.menu1 div:nth-child(2) {
+    margin: 0px 10px;
+}

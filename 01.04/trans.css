@@ -1,0 +1,38 @@
+.main{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    /* transform: ##### */
+
+    /* #1. translate ->이동 */
+    /* transform: translate(10px, 10px) ->음수넣을수있다.
+    translateX(), translateY(), */
+
+    /* #2. size -> 확대. */
+    /* transform: scale(0.7) -> 1보다 작으면 축소 1보다 크면 확대 */
+    /* 음수를 입력하면 반전확대된다. */
+
+    /* #3. rotate -> 회전  */
+    /* transform: rotate(45deg) */
+    /* 양수->시계방향 , 음수-> 반시계방향 */
+    /* x축회전, y축회전이 있다. */
+    /* 3D회전 retate3d(10, 20, 30, 50deg)-> x,y,z축으로 
+    하지만 3d는 자바이용 css로는 쓰지않는다.*/
+
+    /* #4. skew -> 기울기 */
+
+    /* transform: translate(20px, 20px) scale(1.3) 
+                rotate(10deg) skew(-30deg) ; */
+    /*  transform: 변환함수1 변환함수2 변환함수3 ...;
+        transform: 원근법 이동 크기 회전 기울임; */
+    /* 한꺼번에 쓰는게 가능하다. but, 명시적으로 쓰는게 좋다 */
+
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    /* 뒤집어졌을때 안보이게 하는 요소 */
+}
