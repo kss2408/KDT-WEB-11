@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <button onclick="add(num1,num2)">더하기</button>;
+    <button onclick="sub(num1,num2)">빼기</button>;
+    <button onclick="divide(num1,num2)">나누기</button>;
+    <button onclick="mul(num1,num2)">곱하기</button>;
+    <script>
+        let num1 = Number(prompt("첫번째 숫자를 입력하세요."));
+        let num2 = Number(prompt("두번째 숫자를 입력하세요."));
+        function add(num1,num2) {
+         let a = alert(num1+num2) ;
+         
+        }
+        function sub(num1,num2) {
+            let a = alert (num1-num2) ;  
+            
+        }
+        function divide(num1,num2) {
+            let a = alert(num1/num2) ;
+            
+        }
+        function mul(num1,num2) {
+            let a =  alert(num1*num2) ;
+            
+        }
+
+
+    </script>
+
+
+
+
+
+
+
+    <div onclick="test()">클릭</div>
+
+    
+    
+
+    <script>
+        function test() {
+            alert('TEST')
+        }
+    </script>
+</body>
+</html>
