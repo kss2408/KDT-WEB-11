@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="visible">Hello <span>World</span></div>
+        <div id="hidden" class="hidden">Hello <span>World</span></div>
+        <!-- datails 태그 -->
+        <details>
+            <summary>QnA</summary>
+            <div>사용자가 클릭 후 볼 수 있는 내용</div>
+        </details>
+        <script>
+            const visible = document.getElementById('visible');
+            const hidden = document.getElementById('hidden');
+            //text.innerText= 'hi';
+            //text.textContent = '안녕';
+            console.log('visible innerText', visible.innerText);
+            console.log('visible textContent', visible.textContent);
+            /*
+            innerText: 1. "랜더링된" 텍스트를 반영. 즉, 스타일링이 적용된 후 텍스트 변환
+                       2. 성능이 textContent보다 느릴 수 있음.
+            textContent: 1. 요소 "전체" 텍스트 컨텐츠를 가져옴. 즉, css스타일에 관계없이 모든 텍스트
+                         2. 랜더링된 텍스트를 계산하지 않기때문에 성능면에 innerText보다 더 빠름.
+        */
+            // 입력할때 큰차이는 없으나 데이터를 가져올때 차이를 가진다.
+        </script>
+    </body>
+</html>
