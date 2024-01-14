@@ -1,0 +1,24 @@
+/* css는 순서가 매우 중요하다.
+미디어 쿼리는 항상 맨 마지막에 쓰는게 좋다. */
+
+.parent {
+    display: flex;
+}
+.child {
+    width: 100px;
+    height: 100px;
+    border: 1px solid blue;
+    background-color: yellow;
+    margin: 10px;
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px) {
+    /* max- pc기준 / min- 모바일 기준으로 보통 많이쓴다. */
+    .parent {
+        flex-direction: column;
+    }
+
+    .child {
+        background-color: black;
+    }
+}

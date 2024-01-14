@@ -1,18 +1,27 @@
-function calc() {
-    let value1 = Number(document.getElementById('value1').value);
-    let value2 = Number(document.getElementById('value2').value);
-    let op = document.getElementById('op').value;
-    let result = document.getElementById('result');
-    let sum = 0;
-
-    if (op === '+') {
-        sum = value1 + value2;
-    } else if (op === '-') {
-        sum = value1 - value2;
-    } else if (op === '*') {
-        sum = value1 * value2;
-    } else if (op === '/') {
-        sum = value1 / value2;
-    }
-    result.value = sum;
+let number = [];
+for (let i = 0; i < 100; i++) {
+    number[i] = i + 1;
 }
+console.log(number);
+
+let sum1 = 0;
+let sum2 = 0;
+let sum3 = 0;
+
+for (let i = 0; i < number.length; i++) {
+    sum1 = sum1 + number[i];
+}
+
+console.log(sum1);
+
+for (let num of number) {
+    sum2 += num;
+}
+
+console.log(sum2);
+
+number.forEach((i) => {
+    sum3 = i + sum3;
+});
+
+console.log(sum3);
