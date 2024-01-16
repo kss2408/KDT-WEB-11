@@ -1,0 +1,20 @@
+.section1 {
+    position: relative;
+    top: 100px;
+}
+
+section {
+    /* 배경 이미지 URL을 여기에 입력하세요. */
+    background-image: url('iceland-1979445_1920\ \(1\).jpg');
+    /* 배경 이미지를 반복하지 않도록 설정 (기본값은 repeat) */
+    background-repeat: no-repeat;
+    /* 배경 이미지를 화면에 꽉 차게 설정 */
+
+    background-size: cover;
+    /* 배경 이미지의 위치를 가운데 정렬 */
+    background-position: center;
+    /* 페이지 전체에 배경을 적용 */
+    margin: 0;
+    /* 원하는 배경 색상이나 스타일을 추가할 수도 있습니다. */
+    /* background-color: #f0f0f0; */
+}

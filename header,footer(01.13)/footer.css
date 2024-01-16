@@ -1,0 +1,28 @@
+div {
+    display: block;
+    justify-content: space-between;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+}
+
+.footer_info {
+    display: flex;
+    max-width: 120rem;
+}
+
+.footer_ul * {
+    padding: 0; /* 내부 패딩 제거 */
+    margin: 0; /* 마진 제거 */
+    margin-bottom: 8px;
+    list-style-type: none;
+    text-align: left;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto; /* 가운데 정렬을 위한 자동 마진 */
+    text-align: center;
+}

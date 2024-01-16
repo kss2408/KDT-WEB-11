@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: 'Gowun Batang', serif;
+}
+
+/*        header  CSS              */
+
+header {
+    height: 20px;
+    /* 헤더의 높이는 조절할 수 있습니다. */
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    position: fixed;
+    border: 1px solid #d6d6d6;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    z-index: 1000;
+}
+
+header a {
+    font-size: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    list-style-type: none;
+    width: 200px;
+    position: relative;
+    text-align: center;
+}
+
+nav > ul {
+    cursor: pointer;
+    padding: 10px 20px;
+
+    display: flex;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    /*top: header의 height값으로 해야 함*/
+    top: 20px;
+
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #d6d6d6;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+/********** nav  CSS ************/
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+nav > ul > li > ul {
+    top: 42px;
+    /*nav 바로 아래에 보이도록*/
+    display: none;
+    position: absolute;
+    background-color: #f5f5f5;
+    line-height: 100px;
+    width: 100%;
+}
+
+nav > ul > li > ul > li {
+    font-size: 13px;
+    width: 100%;
+}
+
+nav > ul > li:hover > a {
+    color: rgb(243, 111, 111);
+}
+
+nav > ul > li > ul > li:hover {
+    background-color: #c6c4c4;
+}
+
+nav > ul > li > ul > li:hover > a {
+    color: rgb(243, 111, 111);
+}
+
+/*        BrightModeButton  CSS              */
+
+#brightModeButton {
+    position: fixed;
+    left: 95%;
+    top: 15%;
+    border-radius: 50%;
+    border: 1px solid #d6d6d6;
+    /* background-color: red;  버튼 밝기 설정*/
+}
+
+.dark-mode {
+    color: white;
+    background-color: #333;
+}
+
+/*        section  CSS              */
+
+section {
+    width: 100%;
+    height: 1000px;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+footer ul li {
+    margin: 0 10px;
+}
+
+footer ul li a {
+    font-size: 11px;
+    text-decoration: none;
+    color: #333;
+}
+
+footer a {
+    font-size: 11px;
+    padding: 0;
+    color: #333;
+}

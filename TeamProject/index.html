@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <!--화면 넓이: 디바이스 넓이 / initial scale(기본 사이즈)를 1로 지정-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&family=Roboto+Slab&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
+        <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="common.css" />
+        <!-- 추가(성수) -->
+        <link rel="stylesheet" href="support.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar n-1">
+                <div class="homepage-logo">
+                    <a href="#">로고</a>
+                </div>
+                <ul class="navbar-menu">
+                    <li><a href="">로그인</a></li>
+                    <li><a href="">회원가입</a></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li>facebook.icon</li>
+                    <li>instagram.icon</li>
+                </ul>
+            </nav>
+            <nav class="navbar n-2">
+                <!--jQeury: $(".navbar-main-menu a").click(function()) // main-menu ul li (메인 메뉴 클릭하면 하단 메뉴 뜨게)-->
+                <ul class="navbar-main-menu">
+                    <li class="main_menu__name">
+                        <a href="">소개</a>
+                        <div class="main-menu">
+                            <ul class="inner">
+                                <li><a href="">인사말</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="main_menu__name">
+                        <a href="">활동</a>
+                        <div class="main-menu">
+                            <ul class="inner">
+                                <li><a href="">진행중인 캠페인</a></li>
+                                <li><a href="">완료된 캠페인</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="main_menu__name">
+                        <a href="">사업</a>
+                        <div class="main-menu">
+                            <ul class="inner">
+                                <li><a href="">대기</a></li>
+                                <li><a href="">해양</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="main_menu__name">
+                        <a href="">커뮤니케이션</a>
+                        <div class="main-menu">
+                            <ul class="inner">
+                                <li><a href="">자주 묻는 질문</a></li>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">최근 소식</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="main_menu__name">
+                        <a href="">후원하기</a>
+                        <div class="main-menu">
+                            <ul class="inner">
+                                <li><a href="">후원</a></li>
+                                <li><a href="">후원 정보 조회</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="section">
+            <div class="sup">후원정보 확인하기.</div>
+            <div class="section2">
+                <h2>김이조 후원하기</h2>
+                <br />
+                <div id="signupForm">
+                    <div>기본정보</div>
+                    <br />
+                    <label class="la">사용자명:</label>
+                    <input type="text" id="username" name="username" required /><br />
+
+                    <label class="la">휴대폰번호</label>
+                    <input type="email" id="email" name="email" required /><br />
+
+                    <label class="la">비밀번호:</label>
+                    <input type="password" id="password" name="password" required /><br />
+
+                    <button type="button" onclick="registerUser()">가입하기</button>
+                </div>
+                <br />
+
+                <div id="signupForm">
+                    <div>기본정보</div>
+                    <br />
+                    <label class="la">사용자명:</label>
+                    <input type="text" id="username" name="username" required /><br />
+
+                    <label class="la">휴대폰번호</label>
+                    <input type="email" id="email" name="email" required /><br />
+
+                    <label class="la">비밀번호:</label>
+                    <input type="password" id="password" name="password" required /><br />
+
+                    <button type="button" onclick="registerUser()">가입하기</button>
+                </div>
+                <br />
+
+                <div id="loginForm">
+                    <label class="la">이메일:</label>
+                    <input type="email" id="loginEmail" name="loginEmail" required /><br />
+
+                    <label class="la">비밀번호:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required /><br />
+
+                    <button type="button" onclick="loginUser()">로그인</button>
+                </div>
+                <br />
+            </div>
+        </div>
+        <script src="support.js"></script>
+        <footer>
+            <div class="info">
+                <ul class="inner">
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">오시는 길</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">사이트맵</a></li>
+                    <li><a href="">후원문의 02.123.4567</a></li>
+                </ul>
+            </div>
+            <div class="address">
+                <ul class="inner">
+                    <li>사단법인 코딩온위원회</li>
+                    <li>대표자:코딩온</li>
+                    <li>고유번호: 123-45-67890</li>
+                    <li>[00001]서울시 코딩구 코딩로 100(코딩동)</li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <ul class="inner">
+                    COPYRIGHT@THE KOREAN COMMITTEE FOR CODINGON ENVIRONEMNT SUPPORTER.ALL RIGHT RESERVED
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

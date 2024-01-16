@@ -1,0 +1,157 @@
+body {
+    font-size: 16px;
+    line-height: 12px;
+    background-color: rgb(245, 246, 246);
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(172, 174, 177);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+a:hover {
+    color: rgb(91, 87, 86);
+    font-weight: bold;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.navbar {
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.navbar a {
+    font-size: 13px;
+}
+
+.navbar-menu {
+    display: flex;
+}
+
+.navbar-menu > li {
+    padding-left: 10px;
+}
+
+.n-2 {
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid rgb(237, 237, 238);
+    border-bottom: 1px solid rgb(237, 237, 238);
+    display: flex;
+    padding: 10px 0;
+}
+
+.navbar-main-menu {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    position: relative;
+}
+
+.main_menu__name {
+    margin: 0 auto;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.main_menu__name > a {
+    font-size: 15px;
+    color: rgb(57, 57, 58);
+    font-weight: bold;
+}
+
+.main_menu__name a:hover {
+    font-weight: bold;
+}
+
+.main-menu ul li {
+    visibility: hidden;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.5);
+    align-items: center;
+    position: relative;
+    top: 28px;
+    padding: 15px;
+    width: 120px;
+}
+
+.main-menu ul li .show {
+    visibility: visible;
+}
+
+.main-menu ul li:nth-child(2),
+.main-menu ul li:nth-child(3) {
+    border-top: 1px solid rgb(197, 197, 199);
+}
+
+.main-menu ul li:last-child {
+    border-radius: 0 0px 10px 10px;
+}
+
+.main-menu a {
+    margin: 0 auto;
+    color: rgb(50, 51, 51);
+    font-weight: normal;
+    font-size: 14px;
+    padding: 12px 0;
+}
+
+.section {
+    min-height: calc(100vh - 10rem);
+    background: rgb(253, 253, 253);
+}
+
+.section .slogun {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 300px;
+    padding: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    z-index: 1;
+}
+
+footer {
+    height: 10rem;
+    font-size: 10px;
+    text-indent: 30px;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(65, 67, 67);
+}
+
+footer a {
+    font-size: 10px;
+}
+
+footer .inner {
+    position: relative;
+    top: 16px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    color: rgb(126, 128, 129);
+}
+
+/*미디어 쿼리로 메뉴 가로 길이 조절하기*/

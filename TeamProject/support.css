@@ -1,0 +1,67 @@
+.sup {
+    position: relative;
+    margin-top: 200px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 300px;
+    height: 100px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: 5px solid black; /* Set the border color and width */
+}
+
+.section {
+    /* top: 200px; */
+    position: relative;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.section2 {
+    position: relative;
+    border-radius: 10px;
+    margin-right: 100px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 300px;
+}
+
+.section > h2 {
+    padding: 20px;
+}
+
+.la {
+    display: inline-block;
+    text-align: center;
+    width: 80px;
+    font-weight: bold;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+}
+
+body {
+    /* 배경 이미지 URL을 여기에 입력하세요. */
+    background-image: url('환경오염ex.jpg');
+    /* 배경 이미지를 반복하지 않도록 설정 (기본값은 repeat) */
+    background-repeat: no-repeat;
+    /* 배경 이미지를 화면에 꽉 차게 설정 */
+
+    background-size: cover;
+    /* 배경 이미지의 위치를 가운데 정렬 */
+    background-position: center;
+    /* 페이지 전체에 배경을 적용 */
+    margin: 0;
+    /* 원하는 배경 색상이나 스타일을 추가할 수도 있습니다. */
+    /* background-color: #f0f0f0; */
+}
