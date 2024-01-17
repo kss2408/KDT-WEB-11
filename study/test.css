@@ -1,0 +1,7 @@
+.paymentDiv {
+    display: none;
+}
+
+.paymentDiv.show {
+    display: block;
+}

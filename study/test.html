@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="test.css" />
+    </head>
+    <body>
+        <div id="paymentType">
+            <input type="radio" name="payment" id="autoPayRadio" onclick="showDiv('autoPayDiv')" /> 자동이체
+            <input type="radio" name="payment" id="creditCardRadio" onclick="showDiv('creditCardDiv')" /> 신용카드
+        </div>
+
+        <div id="autoPayDiv" class="paymentDiv">
+            <!-- 자동이체에 관련된 내용 -->
+            <label for="bankSelect">은행명:</label>
+            <select id="bankSelect">
+                <option value="1">은행을 선택해 주세요.</option>
+                <option value="2">국민 은행</option>
+                <option value="3">신한 은행</option>
+                <option value="4">하나 은행</option>
+            </select>
+
+            <!-- 다른 자동이체에 필요한 요소들을 추가 -->
+        </div>
+
+        <div id="creditCardDiv" class="paymentDiv">
+            <!-- 신용카드에 관련된 내용 -->
+            <label for="cardNumber">카드번호:</label>
+            <input type="text" id="cardNumber" />
+
+            <!-- 다른 신용카드에 필요한 요소들을 추가 -->
+        </div>
+    </body>
+    <script src="test.js"></script>
+</html>

@@ -1,0 +1,157 @@
+body {
+    font-size: 16px;
+    line-height: 12px;
+    background-color: rgb(245, 246, 246);
+    font-family: "Noto Sans KR", sans-serif;
+    height: 100%;
+}
+
+.wrap {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 100px;
+}
+a {
+    text-decoration: none;
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+a:hover {
+    color: rgb(91, 87, 86);
+    font-weight: bold;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.navbar {
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.navbar a {
+    font-size: 13px;
+}
+
+.navbar-menu {
+    display: flex;
+}
+
+.navbar-menu > li {
+    padding-left: 10px;
+}
+
+.n-2 {
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid rgb(237, 237, 238);
+    border-bottom: 1px solid rgb(237, 237, 238);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.navbar-main-menu {
+    display: flex;
+    width: 100vw;
+    height: 30px;
+    align-items: center;
+    position: relative;
+}
+
+.main_menu__name {
+    margin: 0 auto;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_menu__name > a {
+    font-size: 20px;
+    color: rgb(57, 57, 58);
+    font-weight: bold;
+}
+
+.main-menu ul li {
+    visibility: hidden;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.7);
+    align-items: center;
+    position: relative;
+    top: -2vh;
+    width: 19vw;
+    text-align: center;
+    line-height: 25px;
+    word-break: keep-all;
+}
+
+.main-menu ul li:nth-child(2),
+.main-menu ul li:nth-child(3) {
+    border-top: 1px solid rgb(197, 197, 199);
+}
+
+.main-menu ul li:last-child {
+    border-radius: 0 0px 10px 10px;
+}
+
+.main-menu a {
+    margin: 0 auto;
+    color: rgb(29, 29, 29);
+    font-weight: normal;
+    font-size: 16px;
+    padding: 12px 0;
+}
+
+.main-menu a:hover {
+    color: rgb(78, 79, 79);
+}
+
+section {
+    font-family: "Noto Sans KR", sans-serif;
+    background-color: white;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    font-size: 10px;
+    text-indent: 23px;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(65, 67, 67);
+    padding-top: 20px;
+    line-height: 23px;
+}
+
+footer a {
+    font-size: 10px;
+    color: rgb(106, 107, 107);
+}
+
+footer .info .inner {
+    display: flex;
+    flex-direction: row;
+}
+footer .address .inner {
+    display: flex;
+    flex-direction: row;
+}
+footer .copyright .inner {
+    display: flex;
+    flex-direction: row;
+}
+
+/*미디어 쿼리로 메뉴 가로 길이 조절하기*/

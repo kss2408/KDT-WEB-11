@@ -1,0 +1,164 @@
+section {
+    /* 배경 이미지 URL을 여기에 입력하세요. */
+    background-image: url('iceland-1979445_1920\ \(1\).jpg');
+    /* 배경 이미지를 반복하지 않도록 설정 (기본값은 repeat) */
+    background-repeat: no-repeat;
+    /* 배경 이미지를 화면에 꽉 차게 설정 */
+
+    background-size: cover;
+    /* 배경 이미지의 위치를 가운데 정렬 */
+    background-position: center;
+    /* 페이지 전체에 배경을 적용 */
+    margin: 0;
+    /* 원하는 배경 색상이나 스타일을 추가할 수도 있습니다. */
+    /* background-color: #f0f0f0; */
+}
+
+.section_body {
+    padding: 120px 80px 100px;
+    box-sizing: border-box;
+}
+
+.section_title {
+    display: flex;
+    background-color: aquamarine;
+    color: white;
+    width: 700px;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+.section_title_text {
+    width: 20%;
+    line-height: 1.5;
+}
+
+.section_title_promotion {
+    text-align: left;
+    line-height: 1.5;
+}
+
+.field {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #000;
+}
+
+.section_detail {
+    background-color: rgb(255, 255, 255, 0.5);
+    width: 700px;
+    padding: 50px;
+}
+
+.support_subject {
+    display: flex;
+    font-size: 30px;
+    height: 50px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+.support_subject_sub {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.support_detail {
+    display: flex;
+    text-align: left;
+    line-height: 45px;
+    padding-bottom: 15px;
+}
+
+.lab {
+    width: 20%;
+    line-height: 45px;
+    text-align: left;
+    color: #2b2b2b;
+}
+.label_input {
+    display: flex;
+    padding-bottom: 15px;
+}
+.option_tag {
+    display: flex;
+    line-height: 45px;
+}
+#label_ul {
+    display: flex;
+    padding-bottom: 15px;
+    line-height: 45px;
+    text-align: left;
+    color: #2b2b2b;
+}
+/* input 필요한가? */
+
+.in {
+    display: flex;
+}
+.section_ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+/* 라디오 타입 css 적용 코드들 */
+.type_radio input[type='radio'] {
+    display: none;
+    padding-right: 20px;
+}
+
+.type_radio label {
+    background-color: rgb(25, 127, 158);
+    cursor: pointer;
+    margin-right: 20px;
+    transition: background-color 0.3s; /* 선택/해제 시 부드러운 효과를 위한 트랜지션 설정 */
+    border: #000;
+}
+
+#regular_donate:checked + label {
+    background-color: rgb(255, 241, 47); /* 신용카드 선택 시 배경색 변경 */
+    color: #000000; /* 신용카드 선택 시 글자색 변경 (필요에 따라 조절) */
+}
+
+#creditcardradio:checked + label {
+    background-color: rgb(158, 25, 25); /* 신용카드 선택 시 배경색 변경 */
+    color: #fff; /* 신용카드 선택 시 글자색 변경 (필요에 따라 조절) */
+}
+
+#autopayradio:checked + label {
+    background-color: rgb(0, 128, 0); /* 자동이체 선택 시 배경색 변경 */
+    color: #fff; /* 자동이체 선택 시 글자색 변경 (필요에 따라 조절) */
+}
+
+/* .type_radio input[type='radio']:checked + label {
+    background-color: rgb(158, 25, 25); /* 선택 시 배경색 변경 */
+/* color: #fff; 선택 시 글자색 변경 (선택에 따라 필요에 따라 조절) */
+/* } */
+/*  */
+
+.section_li {
+    margin-right: 10px;
+    list-style: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.hidden.show {
+    display: block;
+}
+
+.donation_button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+.btn {
+    background-color: aqua;
+    width: 220px;
+    height: 60;
+    cursor: pointer;
+}

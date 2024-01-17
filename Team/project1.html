@@ -75,36 +75,120 @@
                     <fieldset class="sonja1">
                         <div><p>후원정보</p></div>
                         <div>
-                            <label for="">후원내용</label>
+                            <label for="" class="lab">후원내용</label>
                             <div class="support_content">블라블라 후원모금</div>
                         </div>
-                        <div>
-                            <label for="">후원주기</label>
-                            <ul>
-                                <li><p>정기후원</p></li>
-                                <li><p>일시후원</p></li>
+                        <!-- div와 div사이 간격 일정하게 조절할 div설정하기 하나의 class로 묶을생각 -->
+                        <div id="lab_ul">
+                            <label class="lab">후원주기</label>
+                            <ul class="section_ul">
+                                <li class="section_li">정기후원</li>
+                                <li class="section_li">일시후원</li>
                             </ul>
                         </div>
-                        <div>
-                            <label for="">후원금액</label>
-                            <ul>
-                                <li><label for="">15000d원</label></li>
-                                <li><label for="">30000d원</label></li>
-                                <li><label for="">50000d원</label></li>
-                                <li><input type="text" placeholder="직접입력" /></li>
+                        <div id="lab_ul">
+                            <label for="" class="lab">후원금액</label>
+                            <ul class="section_ul">
+                                <li class="section_li"><label for="">15000원</label></li>
+                                <li class="section_li"><label for="">30000원</label></li>
+                                <li class="section_li"><label for="">50000원</label></li>
+                                <li class="section_li"><input type="text" placeholder="직접입력" /></li>
                             </ul>
                         </div>
-                    </fieldset class="sonja2">
-                      <p>후원자기본정보</p>
-                      <p>후원내역 확인시 필요한 정보입니다.</p>
-
-                      <div>
-
-                      </div>
-                    <fieldset>
-
                     </fieldset>
-                    <fieldset>손자3</fieldset>
+
+                    <div></div>
+                    <fieldset class="sonja2">
+                        <p>후원자기본정보</p>
+                        <p>후원내역 확인시 필요한 정보입니다.</p>
+                        <div>
+                            <label for="" class="lab">이름</label>
+                            <input type="text" class="in" maxlength="" />
+                        </div>
+                        <div id="lab_ul">
+                            <label for="" class="lab">휴대전화</label>
+                            <input type="text" class="in" />
+                            <div>-</div>
+                            <input type="text" class="in" />
+                            <div>-</div>
+                            <input type="text" class="in" />
+                        </div>
+                        <div>
+                            <label for="" class="lab">이메일</label>
+                            <input type="text" class="in" />
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="sonja2">
+                        <p>결제정보</p>
+                        <div id="lab_ul">
+                            <label for="" class="lab">결제수단</label>
+                            <ul class="section_ul">
+                                <li class="section_li"><span>자동이체</span></li>
+                                <li class="section_li"><span>신용카드</span></li>
+                            </ul>
+                        </div>
+                        <!-- 자동이체 선택 -->
+                        <div>
+                            <div>
+                                <div>
+                                    <label for="" class="lab">은행명</label>
+                                    <!-- 할수있으면 해보자 은행선택 -->
+                                    <span>어</span>
+                                    <!-- <select name="" id="lab"></select> -->
+                                </div>
+                                <div>
+                                    <label for="" class="lab">계좌번호</label>
+                                    <input type="text" class="in" />
+                                </div>
+                                <div>
+                                    <label for="" class="lab">예금주명</label>
+                                    <input type="text" class="in" />
+                                </div>
+                                <div>
+                                    <label for="" class="lab"> 생년월일</label>
+                                    <input type="text" class="in" placeholder="주민번호 앞자리" />
+                                </div>
+                                <div id="lab_ul">
+                                    <label for="" class="lab">출금일</label>
+                                    <div><span>" 매월 x일 "</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 신용카드 -->
+                        <!-- <div>
+                            <div>
+                                <div>
+                                    <label for="">카드번호</label>
+                                    <input type="text" />
+                                </div>
+                                <div>
+                                    <label for="">유효기간</label>
+
+                                    <div>
+                                        <input type="text" placeholder="MM" />
+                                        <input type="text" placeholder="YY" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="">카드주명</label>
+                                    <input type="text" />
+                                </div>
+                                <div>
+                                    <label for="">생년월일</label>
+                                    <input type="text" placeholder="주민번호 앞자리" />
+                                </div>
+                                <div>
+                                    <label for="">비밀번호</label>
+                                    <input type="password" />
+                                </div>
+                                <div>
+                                    <label for="">결제일</label>
+                                    <div><span>" 매월 x일 "</span></div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </fieldset>
                 </div>
             </div>
         </section>

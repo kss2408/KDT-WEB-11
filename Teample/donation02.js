@@ -1,10 +1,13 @@
+//  데이터를 받아서 저장하고 보여주는 js
+
 function registerUser() {
     var username = $('#username').val();
     var email = $('#email').val();
-    var password = $('#password').val();
+    var phonenumber = $('#phonenumber').val();
+    var money = $('#money').val();
 
     var existingUsers = JSON.parse(localStorage.getItem('users')) || [];
-    var newUser = { username: username, email: email, password: password };
+    var newUser = { username: username, email: email, phonenumber: phonenumber, money: money };
     existingUsers.push(newUser);
 
     localStorage.setItem('users', JSON.stringify(existingUsers));
@@ -19,8 +22,10 @@ function registerUser() {
     만약 없으면 빈 배열을 가지게 된다.
     */
 
-    alert('회원가입이 완료되었습니다.');
-    $('#signupForm')[0].reset();
+    location.reload(); // 페이지 새로고침
+
+    alert('후원이 완료되었습니다.');
+    $('#donateForm')[0].reset();
 }
 
 function loginUser() {
@@ -42,4 +47,6 @@ function loginUser() {
     }
 
     $('#loginForm')[0].reset();
+
+    location.reload();
 }
