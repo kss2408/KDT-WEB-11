@@ -14,6 +14,12 @@ section {
     /* background-color: #f0f0f0; */
 }
 
+@media screen and (max-width: 768px) {
+    section {
+        background-image: none;
+    }
+}
+
 .section_body {
     padding: 120px 80px 100px;
     box-sizing: border-box;
@@ -79,6 +85,11 @@ section {
 .label_input {
     display: flex;
     padding-bottom: 15px;
+    flex-direction: row;
+}
+.label_input2 {
+    display: flex;
+    flex-direction: row;
 }
 .option_tag {
     display: flex;
@@ -95,6 +106,11 @@ section {
 
 .in {
     display: flex;
+    width: 300px;
+}
+.in_1 {
+    width: 140px;
+    margin-right: 20px;
 }
 .section_ul {
     padding: 0;
@@ -141,6 +157,13 @@ section {
     list-style: none;
 }
 
+.select_1 {
+    width: 180px;
+}
+.select_2 {
+    width: 120px;
+}
+
 .hidden {
     display: none;
 }
@@ -162,3 +185,27 @@ section {
     height: 60;
     cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+    .section_detail {
+        display: flex; /* flex로 변경 */
+        flex-direction: column; /* 세로 방향으로 배치 */
+        background-color: aquamarine;
+    }
+    .li {
+        border: 1px solid black;
+    }
+}
+
+/* 추가할 미디어쿼리
+
+@media screen and (max-width: 768px) {
+    .section_title_text,
+    .section_title_promotion {
+        display: none; /* 텍스트 숨김 */
+/*   }
+
+    .section_image {
+        display: block; /* 이미지 보이게 함 */
+/*   }
+} */

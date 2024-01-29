@@ -28,6 +28,8 @@ function registerUser() {
     $('#donateForm')[0].reset();
 }
 
+//고찰 : 잘못입력됬을때의 데이터를 받지않는 코드를 추가했다면 어땠을까?
+
 function loginUser() {
     var loginEmail = $('#loginEmail').val();
     var loginPassword = $('#loginPassword').val();

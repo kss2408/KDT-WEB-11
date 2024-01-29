@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 전개구문(spread) -> ...을 사용해서 배열을 나열할수있다.
+            // ...rest -> 호출받은 함수의 남은 파라미터 값을 배열로 설정.
+            //spread 연산자
+            const a = [1, 2, 3];
+            const b = [4, 5];
+            //함수방식 concat
+            const concat = a.concat(b);
+            console.log('concat', concat);
+            //spread 방식 -> 더 편해진 방식이다.
+            const spread = [...a, ...b];
+            console.log('spread', spread);
+            const obj = {
+                name: '홍길동',
+                age: 30,
+            };
+            console.log({ ...obj }, obj); // 비교하면 똑같다.
+            const str = 'hello';
+            console.log({ ...str }); // 배열로 전개해서 풀어쓴다.
+
+            // rest  -> 관례상 rest로 쓰는게 일반적이다.
+            function get(a, b, c, ...rest) {
+                console.log(a, b, rest);
+            }
+            const arr = [10, 20, 30, 40, 50];
+            get(...arr);
+        </script>
+    </body>
+</html>

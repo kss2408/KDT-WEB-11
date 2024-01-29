@@ -203,7 +203,7 @@ favicons/Web/icons8-별-bubbles-32.png<!DOCTYPE html>
                                         <label for="" class="lab">은행명</label>
                                         <!-- 할수있으면 해보자 은행선택 -->
                                         <div class="option_tag">
-                                            <select>
+                                            <select class="select_1">
                                                 <option value="1">은행을 선택해 주세요.</option>
                                                 <option value="2">-국민 은행</option>
                                                 <option value="3">-신한 은행</option>
@@ -227,7 +227,7 @@ favicons/Web/icons8-별-bubbles-32.png<!DOCTYPE html>
                                     <div id="label_ul">
                                         <label for="" class="lab">출금일</label>
                                         <div class="option_tag">
-                                            <select>
+                                            <select class="select_2">
                                                 <option value="5">" 매월 5 일"</option>
                                                 <option value="15">" 매월 15 일"</option>
                                                 <option value="30">" 매월 30 일"</option>
@@ -239,37 +239,43 @@ favicons/Web/icons8-별-bubbles-32.png<!DOCTYPE html>
                             <!-- 신용카드 -->
                             <div id="creditCard" class="hidden">
                                 <div>
-                                    <div>
-                                        <label for="">카드번호</label>
-                                        <input type="text" />
+                                    <div class="label_input">
+                                        <label for="" class="lab">카드번호</label>
+                                        <input type="text" class="in" />
                                     </div>
-                                    <div>
-                                        <label for="">유효기간</label>
-
-                                        <div>
-                                            <input type="text" placeholder="MM" />
-                                            <input type="text" placeholder="YY" />
+                                    <div class="label_input">
+                                        <label for="" class="lab">유효기간</label>
+                                        <div class="label_input2">
+                                            <input type="text" class="in_1" placeholder="MM" />
+                                            <input type="text" class="in_1" placeholder="YY" />
                                         </div>
                                     </div>
-                                    <div>
-                                        <label for="">카드주명</label>
-                                        <input type="text" />
+                                    <div class="label_input">
+                                        <label for="" class="lab">카드주명</label>
+                                        <input type="text" class="in" />
                                     </div>
-                                    <div>
-                                        <label for="">생년월일</label>
-                                        <input type="text" placeholder="주민번호 앞자리" />
+                                    <div class="label_input">
+                                        <label for="" class="lab">생년월일</label>
+                                        <input type="text" class="in" placeholder="주민번호 앞자리" />
                                     </div>
-                                    <div>
-                                        <label for="">비밀번호</label>
-                                        <input type="password" />
+                                    <div class="label_input">
+                                        <label for="" class="lab">비밀번호</label>
+                                        <input type="password" class="in" placeholder="앞 2자리" />
                                     </div>
-                                    <div>
-                                        <label for="">결제일</label>
-                                        <div><span>" 매월 x일 "</span></div>
+                                    <div id="label_ul">
+                                        <label for="" class="lab">결제일</label>
+                                        <div class="option_tag">
+                                            <select class="select_2">
+                                                <option value="5">" 매월 5 일"</option>
+                                                <option value="15">" 매월 15 일"</option>
+                                                <option value="30">" 매월 30 일"</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </fieldset>
+
                         <div class="donation_button">
                             <button class="btn" type="submit" onclick="registerUser()">후원하기</button>
                         </div>

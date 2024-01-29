@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script defer src="index.js"></script>
+    </head>
+    <body>
+        <script>
+            //배열 구조 분해
+            //
+            const lists = ['apple', 'grape'];
+            //기존방식
+            console.log(lists[0], lists[1]);
+            //배열 구조 분해(***순서가 매우 중요)
+            // 배열에 들어가는 이름도 거의 유사하게 쓰는게 낫다.
+            let [item1, item2, item3 = 'peach'] = lists;
+            console.log('item1:', item1, 'item2:', item2);
+            console.log('item3:', item3);
+            item1 = 'banana';
+            console.log('item1:', item1);
+            //교환 (흔히 볼순 없지만 공부.)
+            let x = 1,
+                y = 3;
+            [x, y] = [y, x];
+            console.log(x, y);
+
+            // 객체 -> 백엔드에서 프론트로 넘길때 거의 객체 형태로 넘긴다.
+            const obj = {
+                //key: value
+                name: 'kss',
+                age: 23,
+                gender: 'M',
+                firends: ['Jo', 'Lee'],
+                hello: function () {
+                    console.log('hello world');
+                },
+                'kdt-11': 'kdt 11기', //문자배열형태를 쓰는건 지양해라. 거의 쓰지않는다
+            };
+            console.log(obj.name, obj.gender);
+            obj.age = 29;
+            console.log(obj.age);
+            obj.hello(); //함수일경우 () 넣어주기.
+            console.log(obj.firends[0]);
+            // value 로도 접근할수있다.
+            console.log(obj['name']);
+            //바로 추가해서 넣을수 있다.
+            obj.city = '서울';
+            console.log(obj.city);
+            console.log(obj['kdt-11']); //문자열은 문자열 형태로 불러와야한다.
+            console.log(obj);
+            // *** key 값이 중요하다!!!!!
+            const { name, city, age } = obj;
+            const { firends, hello, age: newAge } = obj; //age 중복되므로 이름을 새로 할당
+            console.log(name, city, age);
+            console.log(firends, hello, newAge);
+        </script>
+    </body>
+</html>
