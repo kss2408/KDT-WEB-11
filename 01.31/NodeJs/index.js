@@ -54,3 +54,5 @@ const server = http.createServer(function (req, res) {
 server.listen(8000, function () {
     console.log('8000번 포트 실행');
 });
+
+// 여기까지 서버만들기 기초과정.
