@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <form name="register-form">
+            <label for="name">이름</label>
+            <input type="text" id="name" required /><br />
+            <label for="email">이메일</label>
+            <input type="email" id="email" required /><br />
+            <!-- jQuery cdn 가져오기 -->
+            <button type="button" onclick="ajaxGet()">ajax get 제출</button>
+            <button type="button" onclick="ajaxPost()">ajax post 제출</button>
+            <!-- axios cdn 가져오기 -->
+            <button type="button" onclick="axiosGet()">axios get 제출</button>
+            <button type="button" onclick="axiosPost()">axios post 제출</button>
+            <button type="button" onclick="fetchGet()">fetch get 제출</button>
+            <button type="button" onclick="fetchPost()">fetch post 제출</button>
+        </form>
+        <div class="result"></div>
+        <script>
+            const resultBox = document.querySelector('.result');
+            function ajaxGet() {
+                //폼 가져오기
+                const form = document.forms['register-form'];
+                //백엔드로 보내는 데이터
+                const data = {
+                    name: form.name.value,
+                    email: form.email.value,
+                };
+                //ajax 백엔드 보내기
+                $.ajax({
+                    type: 'GET',
+                    url: '/ajax',
+                    data: data,
+                    success: (res) => {
+                        console.log('res:', res);
+                        resultBox.textContent = `${res.user}  ${res.address}`;
+                    },
+                    // error 처리 한번 해보자.
+                });
+            }
+            function ajaxPost() {
+                //폼 가져오기
+                const form = document.forms['register-form'];
+                if (form.name.value === '') {
+                    alert('이름을 입력하세요.');
+                    return; // 함수를 끝내기 위해서 리턴을 해준다.
+                }
+                $.ajax({
+                    type: 'POST',
+                    url: '/ajax', // 타입만 다르면 같은 url 써도 된다.
+                    data: {
+                        name: form.name.value,
+                        email: form.email.value, //백엔드에서만 잘받으면 된다 name,email 바꿔도 무관
+                    },
+                    success: (res) => {
+                        console.log('res', res);
+                        resultBox.textContent = `${res.username}  ${res.email}`;
+                    },
+                });
+            }
+            //axios
+            function axiosGet() {
+                const form = document.forms['register-form'];
+                const data = {
+                    username: form.name.value,
+                    mail: form.email.value,
+                };
+
+                axios({
+                    //안에 객체 넣기
+                    method: 'GET',
+                    // url: `/axios?username=${form.name.value}&mail=${form.email.value}`
+                    // 포스트는 안된다. GET은 가능.
+                    url: '/axios',
+                    params: data,
+                }).then((res) => {
+                    console.log('res', res);
+                    resultBox.textContent = `${res.data.username} 님 주소는 ${res.data.mail}입니다`;
+                    // res라고 변수처리했으니 res.data.username 이라고 썻고 axios가 자동으로 data를 만들어주기때문에 data.을 붙여야 한다.
+                });
+            }
+            /* //방법 1
+            function axiosPost() {
+                const data = {
+                    username: document.querySelector('#name').value,
+                    email: document.querySelector('#email').value,
+                };
+                axios({
+                    method: 'POST',
+                    url: '/axios',
+                    data, // data=data 니까 생략 가능
+                }).then((res) => {
+                    console.log('res', res);
+                }); 
+            } //promise 기반이므로 .then !!!!  */
+
+            // 방법2 async는 try 안에 넣어서 작업한다.
+            async function axiosPost() {
+                const data = {
+                    username: document.querySelector('#name').value,
+                    email: document.querySelector('#email').value,
+                };
+                try {
+                    const res = await axios({
+                        method: 'POST',
+                        url: '/axios',
+                        data,
+                    });
+                    console.log('res', res);
+                    const { name, address } = res.data;
+                    resultBox.textContent = name + address;
+
+                    // resultBox.textContent = res.data.name + res.data.address;
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+
+            //fetch -> 요구(필요로써야)하는게 은근히 많다.
+            function fetchGet() {
+                const form = document.forms['register-form'];
+                const url = `?name=${form.name.value}&email=${form.email.value}`;
+                // get이므로 쿼리셀렉  ?key value key vlaue 형태로
+                //너무 길어지니 url 설정해준것.
+                fetch(`/fetch${url}`, {
+                    method: 'GET',
+                })
+                    .then((res) => {
+                        console.log('res', res);
+                        //JSON 응답을 네이티브 javascript 객체로 파싱
+                        return res.json();
+                    })
+                    .then((data) => {
+                        console.log('data', data);
+                        resultBox.textContent = `${data.name}님 주소는 ${data.email}입니다. `;
+                    });
+            }
+
+            function fetchPost() {
+                const data = {
+                    username: document.querySelector('#name').value,
+                    email: document.querySelector('#email').value,
+                };
+                fetch('/fetch', {
+                    method: 'POST',
+                    body: JSON.stringify(data), //그냥 데이터보내면 오류난다.
+                    headers: {
+                        'Content-Type': 'application/json', // 전송타입 JSON으로 보냈지만 알아서 처리해준다
+                    },
+                })
+                    .then((res) => {
+                        console.log('res'.res);
+                        return res.json();
+                    })
+                    .then((data) => {
+                        console.log('data', data);
+                        resultBox.textContent = `${data.username}님 주소는 ${data.email}입니다. `;
+                    });
+            }
+        </script>
+    </body>
+</html>
