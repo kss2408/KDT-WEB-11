@@ -7,7 +7,7 @@ exports.all = async (req, res) => {
     // });
     const result = await Post.findAll({ order: [['id', 'desc']] });
     console.log('all', result);
-    res.json({ result: true, data: result });
+    res.json({ success: true, result });
 };
 //하나 조회
 exports.post = async (req, res) => {
@@ -16,7 +16,7 @@ exports.post = async (req, res) => {
     // include: [{ model: Comment }] == include: Comment 는 동일 결과
     // include: 쿼리를 실행할때 관련된 모델의 데이터도 함께 조회할 수 있도록 하는 옵션
     const result = await Post.findByPk(req.params.id, { include: [{ model: Comment }] });
-    res.json({ result: true, data: result });
+    res.json({ success: true, result });
 };
 //하나 생성
 exports.write = async (req, res) => {
@@ -26,7 +26,7 @@ exports.write = async (req, res) => {
         content,
     });
     console.log('write', result);
-    res.json({ result: true, data: result.id });
+    res.json({ success: true, result: result.id });
 };
 //하나 수정
 exports.update = async (req, res) => {
@@ -39,13 +39,13 @@ exports.update = async (req, res) => {
         { where: { id } }
     );
     console.log('update', result);
-    res.json({ result: true });
+    res.json({ success: true });
 };
 //하나 삭제
 exports.delete = async (req, res) => {
     const result = await Post.destroy({ where: { id: req.body.id } });
     console.log('delete', result);
-    res.json({ result: true });
+    res.json({ success: true });
 };
 
 //댓글 작성
@@ -53,5 +53,5 @@ exports.comment = async (req, res) => {
     const { id, content } = req.body;
     const result = await Comment.create({ content, postId: id });
     console.log('comment', result);
-    res.json({ result: true });
+    res.json({ success: true });
 };

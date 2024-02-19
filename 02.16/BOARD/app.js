@@ -1,4 +1,6 @@
 const express = require('express');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
 const db = require('./models');
 const app = express();
 const PORT = 8000;
@@ -6,6 +8,18 @@ const PORT = 8000;
 //미들웨어
 app.set('view engine', 'ejs');
 app.use(express.json());
+app.use(cookieParser());
+app.use(
+    session({
+        secret: 'my-board', //세션 암호화를 위한 비밀키
+        resave: false, // 항상 세션을 저장할지 여부
+        saveUninitialized: true, // 초기화 되지 않는 세션을 스토어에 저장
+        cookie: {
+            httpOnly: true, // 클라이언트에서 쿠키를 확인하지 못하도록 함
+            secure: false, // https에서만 사용
+        },
+    })
+);
 
 //라우터
 const indexRouter = require('./routes');

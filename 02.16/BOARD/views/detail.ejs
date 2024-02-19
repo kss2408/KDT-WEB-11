@@ -27,7 +27,7 @@
                     url: `/api/post/${url}`,
                 });
                 console.log(res);
-                const { id, title, content, comments } = res.data.data;
+                const { id, title, content, comments } = res.data.result;
                 document.querySelector('#title').value = title;
                 document.querySelector('#content').value = content;
                 document.querySelector('#index').value = id;
@@ -52,7 +52,7 @@
                     },
                 });
                 console.log('res', res);
-                if (res.data.result) {
+                if (res.data.success) {
                     document.location.reload();
                 }
             }
@@ -68,7 +68,7 @@
                         id: document.querySelector('#index').value,
                     },
                 });
-                if (res.data.result) {
+                if (res.data.success) {
                     document.location.href = '/post';
                 }
             }

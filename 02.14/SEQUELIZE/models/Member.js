@@ -1,5 +1,7 @@
 const { DataTypes } = require('sequelize');
 
+//쿼리문 말고 이걸 쓰는 이유 : 오류 절감, 코드량 감소, 정해진 형태가 어느정도 있다.
+
 const MemberModel = (sequelize) => {
     const Member = sequelize.define(
         'member',

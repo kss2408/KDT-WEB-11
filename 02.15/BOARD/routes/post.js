@@ -13,5 +13,7 @@ router.post('/write', controller.write);
 router.patch('/update', controller.update);
 //DELETE /delete 게시판 글 하나 삭제
 router.delete('/delete', controller.delete);
+//POST /comment 댓글 생성
+router.post('/comment', controller.comment);
 
 module.exports = router;
