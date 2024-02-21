@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="/socket.io/socket.io.js"></script>
+        <!-- 소켓io에서 자발적으로 만들어준걸 쓰는방식. -->
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Socket.Io</h1>
+        <ul></ul>
+        <form id="chat">
+            <input type="text" id="user" placeholder="사용자명" />
+            <input type="text" id="message" placeholder="채팅내용" /><br />
+            <button>채팅</button>
+        </form>
+
+        <script>
+            const socket = io();
+            const chatForm = document.querySelector('#chat');
+            const ul = document.querySelector('ul');
+            //이벤트 생성
+            //3개 보내면 3개로 받고(js ->ejs) 3개 콜백(ejs -> js)하는것을 담았다.
+            socket.emit('open_message', '접속되었습니다.', 'ㅎㅎㅎ', 123, (res, res2, res3) => {
+                console.log(res, res2, res3);
+            });
+
+            // 브라우저 백엔드에서 보낸 내용 받기.
+            socket.on('backend_message', (arg) => {
+                const li = document.createElement('li');
+                li.textContent = `${arg.user}: ${arg.message}`;
+                ul.appendChild(li);
+            });
+
+            //폼 이벤트 , 브라우저 내용 백엔드로 보내기
+            chatForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const user = chatForm.querySelector('#user'); //document로 쓸수있지만 해당하는 챗폼 바로 가져오기 위해서 사용할수있다.
+                const msg = chatForm.querySelector('#message');
+
+                socket.emit('form_message', { user: user.value, message: msg.value });
+                msg.value = '';
+            });
+        </script>
+    </body>
+</html>
